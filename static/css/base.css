@@ -1,6 +1,7 @@
 header h1 a {
     color: red;
     text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 body{

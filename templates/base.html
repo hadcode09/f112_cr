@@ -12,11 +12,12 @@
                 <h1><a href="{% url 'home' %}">Django blog</a></h1>
             </div>
             <div class="nav-right">
-               <a href="{% url 'post_new' %}">+ New Blog Post</a>
+                <a href="{% url 'post_new' %}">+ New Blog Post</a>
             </div>
         </header>
+        <div>
         {% if user.is_authenticated %}
-            <p>Hi {{ userusername }}</p>
+            <p>Hi {{ user.username }}</p>
             <a href="{% url 'logout' %}">Log out</a>
         {% else %}
             <a href="{% url 'login' %}">Log In</a>
@@ -25,5 +26,6 @@
             {% block content %}
             {% endblock content %}
         </div>
+    </div>
     </body>
 </html>
